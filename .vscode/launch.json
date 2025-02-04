@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/${input:programPath}",
+      "preLaunchTask": "build"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "programPath",
+      "description": "Select the entry point for your program",
+      "options": [
+        "src/index.ts",
+        "src/flashmint/index.ts",
+        "src/quote/index.ts",
+        "src/utils/index.ts"
+      ]
+    }
+  ]
+}
